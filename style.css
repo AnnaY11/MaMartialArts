@@ -97,7 +97,6 @@ html {
   /*PHOTO GALLERY*/
   .gallery {
     text-align: center;
-    display: inline-block;
     align-items: center;
     padding: 40px;
     background-color: #F9F3E5;
