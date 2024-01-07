@@ -101,6 +101,7 @@ html {
     align-items: center;
     padding: 40px;
     background-color: #F9F3E5;
+    width: auto;
   }
 
   .gallery img {
