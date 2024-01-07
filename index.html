@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MA Masters</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="assets/Logo.png">
+
+  <!-- Import Josefin Sans and Abril Fatface font from
+  Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril Fatface">
+
+</head>
+ 
+
+<body>
+
+  <!--Nav Bar-->
+  <div id="nav-placeholder">
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+      $.get("nav.html", function(data){
+      $("#nav-placeholder").replaceWith(data);
+      });
+    </script>
+  </div>
+  
+  <!--First Heading-->
+  <div class="firstHeading">
+    <img src="assets/coverImage.png" height="200px" width="auto">
+    <p>
+      MA Masters is dedicated to teaching young students about mastering the craft of Martial Arts. We are currently based in Georgia. 
+      Our classes are led by ex-professional MMA fighter, Michael Anderson. He is dedicated to fostering the strength of young students
+      by teaching self defense, Martial Arts forms, and kickboxing. 
+    </p>
+  </div>
+
+  <!--Contact Form-->
+  <div class="contactContainer">
+      <form class="contactForm" action="contact_us_submitted.html" method="POST">
+
+        <input type="hidden" name="access_key" value="febe8294-0cbb-4628-866e-d2cfe822a2cd">
+  
+    <!-- Optional: Subject an be prefilled using type="hidden"
+         or type="text" for normal user submitted input -->
+    <input type="hidden" name="subject" value="New Submission from Contact Us MA Martial Arts Form">
+  
+    <!-- Optional: From Name you want to see in the email
+         Default is "Notifications". you can overwrite here -->
+    <input type="hidden" name="from_name" value="Contact Us MA Martial Arts Form">
+  
+    <!-- Required: If submitting form without Javascript.
+         Default web3forms output is in JSON format. -->
+    <!-- Not Required: If javascript, use "window.location.hash" instead -->
+    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+  
+    <!-- Optional: But Recommended: To Prevent SPAM Submission.
+         Make sure its hidden by default -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+        <h1>Contact Us</h1>
+        <h3>Learn more about our classes here!</h3>
+        <input type="text" name="Full Name" id="contact_name" placeholder="Full Name" required/>
+        <input type="email" name="email" id="contact_email" placeholder="Email" required/>
+        <input type="text" name="Phone Number" id="contact_phone_number" placeholder="Phone Number" required/>
+        <textarea id="contact_message" name="Optional Message" cols="40" rows="1" placeholder="Optional Message" ></textarea>
+        <button type="submit">Submit</button>
+      </form>
+  </div>
+
+  <!--Photo Gallery-->
+  <div class="gallery">
+    <h1>Photo Gallery</h1>
+    
+    <img src="assets/gallery2.png" width="400px">
+    <img src="assets/gallery4.png" width="400px">
+    <img src="assets/gallery3.png" width="425px">
+    <img src="assets/gallery5.png" width="350px">
+    <img src="assets/gallery6.jpg" width="400px">
+    <img src="assets/gallery1.png" width="300px">
+    <img src="assets/gallery7.jpg" width="400px">
+    <img src="assets/gallery8.png" width="400px">
+    
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

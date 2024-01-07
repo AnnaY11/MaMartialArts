@@ -1,0 +1,244 @@
+html {
+    height: 100%;
+    width: 100%;
+    font-family:
+   'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+    font-size:  18pt;
+  }
+
+  /*NAVIGATION BAR*/
+  .header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F9F3E5;
+    color: black;
+    padding: 16px 50px 15px 40px;
+    font-size: 25px;
+    margin: 0px;
+    
+    
+  }
+
+    /*positions logo to top-left*/
+  .logo{
+    position: relative;
+    width: 80px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  /*formats navbar links*/
+  .navbar a {
+    position: relative;
+    color:black;
+    margin: 0px 20px;
+    padding: 0px;
+    text-decoration: none;
+  }
+
+  /*creates the bottom line that appears on hover under each navbar link*/
+  .navbar a::before {
+    position: absolute;
+    content: '';
+    top: 105%;
+    width: 0%;
+    height: 3px;
+    background: #d30000;
+    transition: .2s;
+  }
+
+  /*makes bottom line appear on hover under each navbar link*/
+  .navbar a:hover::before {
+    width: 100%;
+  }
+
+  .navbar a.current::before {
+    width: 100%;
+  }
+
+  /*makes the navbar link for the current page red*/
+  .header .navbar .current{
+    color: #d30000;
+  }
+
+  /*formats Nav Bar links after visited*/
+  .navbar a:visited{
+    color:black;
+  }
+  
+  /*formats Nav Bar links on hover*/
+  .navbar a:hover{
+    color: #d30000;
+  }
+  
+  /*END OF NAVIGATION BAR*/
+  
+  /*FIRST HEADING*/
+  .firstHeading {
+    padding: 80px 100px;
+    margin: none;
+    text-align: center;
+    width: auto;
+    background-color: lightgray;
+   }
+
+  /*PHOTO GALLERY*/
+  .gallery {
+    text-align: center;
+    display: inline-block;
+    align-items: center;
+    padding: 40px;
+    background-color: #F9F3E5;
+  }
+
+  .gallery img {
+    border: 5px solid black;
+  }
+
+  /*SIGN UP FORM*/
+  .signUpForm {
+    margin: 20px;
+    text-align: center;
+    border: 5px solid black;
+    padding: 10px;
+  }
+
+  .signUpForm .formElement {
+    margin: 10px;
+  }
+
+  .submitButton {
+    display: flex;
+    justify-content: center;
+  }
+
+  #submitButton {
+    color:black;
+    background-color: #F9F3E5;
+    border: 1.5px solid black;
+    font-family:
+   'Josefin Sans', sans-serif;
+    font-size: 18px;
+    padding: 7px 11px;
+    margin: 10px;
+  }
+
+  #submitButton:hover {
+    padding: 9px 13px;
+  }
+
+  select{
+    font-size: 18px;
+    border: 2px solid black;
+    font-family:
+   'Josefin Sans', sans-serif;
+    padding: 4px;
+  }
+
+  /*CONTACT US FORM*/
+  .contactContainer {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: #F9F3E5;
+    text-align: center;
+  }
+
+  .contactForm{
+    padding: 2vs 4vs;
+    width: 90%;
+    max-width: max-content;
+    border-radius: 10px;
+  }
+
+  .contactForm h1 {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    padding-top: 20px;
+    color: #d30000;
+    line-height: 20px;
+  }
+
+  .contactForm h3 {
+    margin-bottom: 20px;
+    padding-bottom: 0px;
+    color: #d30000;
+  }
+
+  .contactForm input[type="text"], .contactForm input[type="email"], textarea {
+    border: 0;
+    margin: 0 0 30px 0;
+    padding: 10px;
+    outline: none;
+    background: #F9F3E5;
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  .contactForm textarea {
+    margin-top: 1px;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+
+  .contactForm button {
+    margin-top: 1px;
+    margin-bottom: 0;
+    padding: 10px;
+    background: #d30000;
+    color: black;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  .contactForm button:hover {
+    background-color: #AB0000;
+  }
+
+
+  /*CONTACT US SUBMITTED INFO*/
+  .contact_us_submitted {
+    background-color: #F9F3E5;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .submitted_info {
+    background-color: black;
+    width: 100vh;
+    color: #d30000;
+    padding: 20px 20px 55px 20px;
+    margin: 0 auto 30vh auto;
+    height: auto;
+    border-radius: 14px;
+    text-align: center;
+  }
+
+  .submitted_info h3 {
+    padding: 0 90px;
+    margin-bottom: 40px;
+  }
+  .submitted_info h1 {
+    padding-top: 40px;
+  }
+  .submitted_info a {
+    color:#F9F3E5;
+  }

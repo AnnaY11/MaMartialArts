@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>MA Masters</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link rel="icon" type="image/png" href="assets/Logo.png">
+      
+        <!-- Import Josefin Sans and Abril Fatface font from
+        Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril Fatface">
+      
+    </head>
+    <body>
+        <!--Nav Bar-->
+        <div id="nav-placeholder">
+            <script src="//code.jquery.com/jquery.min.js"></script>
+            <script>
+                $.get("nav.html", function(data){
+                $("#nav-placeholder").replaceWith(data);
+                });
+            </script>
+        </div>
+    <div class="contact_us_submitted">
+        <div class="submitted_info">
+            <h1>Thanks for submitting!</h1>
+            <h3>We just sent you some general information about our program. 
+                A personal email reply will be sent to you within 48 hours.</h3>
+            <a href="index.html">Home</a>
+        </div>
+    </div>
+    </body>
+</html>
+

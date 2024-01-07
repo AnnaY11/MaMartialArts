@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MA Masters</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="assets/Logo.png">
+
+  <!-- Import Josefin Sans and Abril Fatface font from
+  Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril Fatface">
+
+</head>
+ 
+
+<body>
+
+  <div id="nav-placeholder">
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+      $.get("nav.html", function(data){
+      $("#nav-placeholder").replaceWith(data);
+      });
+    </script>
+  </div>
+
+  <!--Sign Up Form-->
+  <form action="index.html" method="get" class="signUpForm">
+    <h3>
+      Parent Information:
+    </h3>
+    <div class="formElement" id="parentFirst">
+      <label for="first_name">First Name:</label>
+      <input type="text" id="parent_first_name" placeholder="First" name="parent_first_name">
+    </div>
+    <div class="formElement" id="parentLast">
+      <label for="last_name">Last Name:</label>
+      <input type="text" id="parent_last_name" placeholder="Last" name="parent_last_name">
+    </div>
+
+    <div class="formElement" id="parentEmail">
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="example@gmail.com" name="email">
+    </div>
+
+    <h3>
+      Student Information:
+    </h3>
+    <div class="formElement" id="studentFirst">
+      <label for="first_name">First Name:</label>
+      <input type="text" id="first_name" placeholder="First" name="first_name">
+    </div>
+    <div class="formElement" id="studentLast">
+      <label for="last_name">Last Name:</label>
+      <input type="text" id="last_name" placeholder="Last" name="last_name">
+    </div>
+
+    <div class="formElement" id="studentClassOption">
+      <label for="classOption">Class:</label>
+          <select name="classOption">
+            <optgroup label="Grade K-6">
+              <option value="Mondays 5-6pm">Mondays 5-6pm</option>
+              <option value="Wednesdays 5-6pm">Wednesdays 5-6pm</option>
+              <option value="Saturdays 11am-12pm">Saturdays 11am-12pm</option>
+            </optgroup>
+            <optgroup label="Grade 7-12">
+              <option value="Tuesdays 6-7pm">Tuesdays 6-7pm</option>
+              <option value="Thursdays 6-7pm">Thursdays 6-7pm</option>
+              <option value="Saturdays 12-1pm">Saturdays 12-1pm</option>
+            </optgroup>
+          </select>
+    </div>
+
+    <div class="submitButton">
+    <button type="submit" id="submitButton">Submit</button>
+    </div>
+
+  </form>
+  <script src="script.js"></script>
+</head>
+</html>

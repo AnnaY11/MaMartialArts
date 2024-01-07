@@ -1,0 +1,20 @@
+<script src="//code.jquery.com/jquery.min.js"></script>
+  <script>
+      $(function(){
+          $('a').each(function(){
+              if ($(this).prop('href') == window.location.href) {
+                  $(this).addClass('current');
+              }
+          });
+      });
+  </script>
+
+<!--navBar-->
+<header class="header">
+    <a href="index.html"><img src="assets/Logo.png" alt="MA Masters Logo" class="logo" title="MA Masters Logo"></a>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="signUp.html">Sign Up</a>
+    </nav>
+</header>
