@@ -1,10 +1,42 @@
-// const button = document.querySelector("button");
-// const first_name = document.querySelector("#first_name")
-// const parent_email = document.querySelector("#email")
+function submitMessage(message) {
+    var modal = document.getElementById("myModal");
+    var modalMessage = document.getElementById("modalMessage");
 
-// button.addEventListener ("click", submit);
+    // Set the message in the modal
+    modalMessage.textContent = message;
 
-// function submit() {
-//     alert(`Thanks for submitting, ${first_name.value}! We will send an email to \n${parent_email.value} soon with more details about the class.`);
+    // Show the modal
+    modal.style.display = "block";
 
-// }
+    // Add event listener to close the modal when the close button is clicked
+    var closeButton = document.getElementsByClassName("close")[0];
+    closeButton.addEventListener("click", function() {
+      modal.style.display = "none";
+    });
+  }
+
+  // Add event listener to the form submission
+  document.getElementsByClassName("signUpForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Show the modal immediately to indicate form submission is in progress
+    submitMessage("Submitting...");
+
+    // Perform an AJAX request to submit the form
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", this.action);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          // Successful response
+          var response = xhr.responseText;
+          showModal(response); // Show the modal with the response message
+          document.getElementsByClassName("signUpForm").reset(); //Clear the form fields
+        } else {
+          // Error response
+          showModal("Error: Something went wrong. Please try again."); // Show a generic error message
+        }
+      }
+    };
+    xhr.send(new FormData(this));
+  });
