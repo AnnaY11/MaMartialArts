@@ -253,10 +253,63 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: #F9F3E5;
     color: #d30000;
     margin: 5vh 40vh;
     padding: 20px;
     border-radius: 5px;
 
+  }
+
+  .classSchedule {
+    display: flex;
+    justify-content: center;
+    background-color: lightgray;
+  }
+
+  .classSchedule table, .classSchedule th, .classSchedule td {
+    border: solid black 6px;
+    border-collapse: collapse;
+    color: black;
+    background-color: lightgrey;
+    text-align: center;
+    font-size: 18pt;
+    line-height: 25px;
+    
+  }
+
+  .classSchedule th {
+    padding: 5px;
+    margin: 0;
+    color: #d30000
+  }
+
+  .classSchedule th, .classSchedule td, .classSchedule tr {
+    padding: 10px;
+  }
+
+  #x_symbol {
+    text-align: center;
+    color: #d30000;
+  }
+
+  .classSchedule table {
+    table-layout: fixed; 
+    width: 100%;
+    margin: 1vh 3% 25px 2vh;
+    height: 450px;
+  }
+
+  #michael_anderson_img {
+    margin-left: 3%;
+    margin: 1vh 0 25px 3%;
+  }
+
+  .kids_teens {
+    background-color: lightgrey;
+    color: #d30000;
+    text-align: center;
+    display: block;
+    padding: 40px 20px 20px 20px;
+    margin: 0;
   }
