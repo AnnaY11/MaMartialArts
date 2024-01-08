@@ -30,11 +30,11 @@ function submitMessage(message) {
         if (xhr.status === 200) {
           // Successful response
           var response = xhr.responseText;
-          showModal(response); // Show the modal with the response message
+          submitMessage(response); // Show the modal with the response message
           document.getElementsByClassName("signUpForm").reset(); //Clear the form fields
         } else {
           // Error response
-          showModal("Error: Something went wrong. Please try again."); // Show a generic error message
+          submitMessage("Error: Something went wrong. Please try again."); // Show a generic error message
         }
       }
     };
