@@ -45,6 +45,7 @@
             </h3>
             <a href="index.html">Home</a>
         </div>
+    </div>
   </body>
 </html>
 

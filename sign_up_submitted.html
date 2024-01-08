@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>MA Masters</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link rel="icon" type="image/png" href="assets/Logo.png">
+      
+        <!-- Import Josefin Sans and Abril Fatface font from
+        Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril Fatface">
+      
+    </head>
+    <body>
+        <!--Nav Bar-->
+        <div id="nav-placeholder">
+            <script src="//code.jquery.com/jquery.min.js"></script>
+            <script>
+                $.get("nav.html", function(data){
+                $("#nav-placeholder").replaceWith(data);
+                });
+            </script>
+        </div>
+    <div class="contact_us_submitted">
+        <div class="submitted_info">
+            <script>
+                function takevalue() 
+                {
+                    var parent_first_name = document.getElementById("parent_first_name").value;
+                    var parent_last_name = document.getElementById("parent_last_name").value;
+                    var parent_email = document.getElementById("parent_email").value;
+                    var parent_phone_number = document.getElementById("parent_phone_number").value;
+                    var student_first_name = document.getElementById("student_first_name").value;
+                    var student_last_name = document.getElementById("student_last_name").value;
+                    var class_option = document.getElementById("class_option").value;
+
+                    document.write("<h1>Thanks for signing up, " + parent_first_name + "!</h1>" +
+                    "<h3>We just sent an email to " + $parent_email + " with information about payment, " + 
+                        "a summary of your registration, and all the information you'll need for you or your student to" +
+                        "join us in class! We are excited to see you soon! Please feel free to fill out the " + 
+                        "Contact Us form if you have any questions!</h3>");
+                }
+            </script>
+        </div>
+    </div>
+    </body>
+</html>
+
