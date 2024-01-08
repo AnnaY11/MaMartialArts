@@ -28,39 +28,44 @@
   </div>
 
   <!--Sign Up Form-->
-  <form action="info.php" method="get" class="signUpForm">
+  <form action="info.php" method="post" class="signUpForm">
     <h3>
       Parent Information:
     </h3>
     <div class="formElement" id="parentFirst">
-      <label for="first_name">First Name:</label>
+      <label for="parent_first_name">First Name:</label>
       <input type="text" id="parent_first_name" placeholder="First" name="parent_first_name">
     </div>
     <div class="formElement" id="parentLast">
-      <label for="last_name">Last Name:</label>
+      <label for="parent_last_name">Last Name:</label>
       <input type="text" id="parent_last_name" placeholder="Last" name="parent_last_name">
     </div>
 
     <div class="formElement" id="parentEmail">
-      <label for="email">Email:</label>
-      <input type="email" id="email" placeholder="example@gmail.com" name="email">
+      <label for="parent_email">Email:</label>
+      <input type="email" id="parent_email" placeholder="example@gmail.com" name="parent_email">
+    </div>
+
+    <div class="formElement" id="parentPhone">
+      <label for="parent_phone_number">Phone Number:</label>
+      <input type="number" id="parent_phone_number" placeholder="Phone Number" name="parent_phone_number">
     </div>
 
     <h3>
       Student Information:
     </h3>
     <div class="formElement" id="studentFirst">
-      <label for="first_name">First Name:</label>
-      <input type="text" id="first_name" placeholder="First" name="first_name">
+      <label for="student_first_name">First Name:</label>
+      <input type="text" id="student_first_name" placeholder="First" name="student_first_name">
     </div>
     <div class="formElement" id="studentLast">
-      <label for="last_name">Last Name:</label>
-      <input type="text" id="last_name" placeholder="Last" name="last_name">
+      <label for="student_last_name">Last Name:</label>
+      <input type="text" id="student_last_name" placeholder="Last" name="student_last_name">
     </div>
 
     <div class="formElement" id="studentClassOption">
       <label for="classOption">Class:</label>
-          <select name="classOption">
+          <select name="class_option">
             <optgroup label="Grade K-6">
               <option value="Mondays 5-6pm">Mondays 5-6pm</option>
               <option value="Wednesdays 5-6pm">Wednesdays 5-6pm</option>
