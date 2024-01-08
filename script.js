@@ -1,3 +1,4 @@
+document.getElementById("myModal").style.display = "none";
 function submitMessage(message) {
     var modal = document.getElementById("myModal");
     var modalMessage = document.getElementById("modalMessage");
@@ -16,10 +17,11 @@ function submitMessage(message) {
   }
 
   // Add event listener to the form submission
-  document.getElementsByClassName("signUpForm").addEventListener("submit", function(event) {
+  document.getElementById("signUpForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent the default form submission
 
     // Show the modal immediately to indicate form submission is in progress
+    document.getElementById("signUpForm").style.display = "none";
     submitMessage("Submitting...");
 
     // Perform an AJAX request to submit the form
@@ -31,7 +33,7 @@ function submitMessage(message) {
           // Successful response
           var response = xhr.responseText;
           submitMessage(response); // Show the modal with the response message
-          document.getElementsByClassName("signUpForm").reset(); //Clear the form fields
+          document.getElementById("signUpForm").reset(); //Clear the form fields
         } else {
           // Error response
           submitMessage("Error: Something went wrong. Please try again."); // Show a generic error message

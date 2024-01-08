@@ -242,3 +242,21 @@ html {
   .submitted_info a {
     color:#F9F3E5;
   }
+
+/*Sign Up Form Submission Modal*/
+  .close:hover {
+    cursor: pointer;
+    text-align: right;
+  }
+
+  .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: #d30000;
+    margin: 5vh 40vh;
+    padding: 20px;
+    border-radius: 5px;
+
+  }
