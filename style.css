@@ -301,7 +301,7 @@ html {
   .classSchedule table {
     table-layout: fixed; 
     width: 100%;
-    margin: 1vh 3% 25px 2vh;
+    margin: 1vh 3% 70px 2vh;
     height: 450px;
   }
 
@@ -315,6 +315,55 @@ html {
     color: #d30000;
     text-align: center;
     display: block;
-    padding: 40px 20px 20px 20px;
+    padding: 70px 20px 20px 20px;
     margin: 0;
+  }
+
+  .AboutHeading {
+    background-color: black;
+    color:#d30000;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+  }
+
+  .AboutHeading a {
+    background-color: black;
+    color:#d30000;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    text-decoration: none;
+    font-size: 20pt;
+  }
+
+  .AboutHeading a:hover {
+    text-decoration: underline;
+  }
+
+  .PrivateLessons {
+    background-color: #d30000;
+    padding: 40px;
+    color: black;
+  }
+
+  .PrivateLessons a {
+    text-decoration: none;
+    padding: 15px;
+    color: black;
+    background-color: #F9F3E5;
+    border-radius: 5px;
+    border: black 5px;
+  }
+  .PrivateLessons a:hover {
+    text-decoration: underline;
+  }
+
+  .PrivateLessons p {
+    margin-bottom: 60px;
+  }
+
+  .PrivateLessons img {
+    float: right;
+    margin-top: 10px;
   }
