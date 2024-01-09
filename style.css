@@ -247,6 +247,11 @@ html {
   .close:hover {
     cursor: pointer;
     text-align: right;
+    color: black;
+  }
+
+  .close {
+    color: #d30000
   }
 
   .modal {
@@ -254,11 +259,11 @@ html {
     justify-content: center;
     align-items: center;
     background-color: #F9F3E5;
-    color: #d30000;
+    color: black;
     margin: 5vh 40vh;
     padding: 20px;
-    border-radius: 5px;
-
+    border-radius: 6px;
+    border: solid black 6px
   }
 
   .classSchedule {
