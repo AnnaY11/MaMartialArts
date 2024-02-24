@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MA Masters</title>
+  <title>MA Masters - Martial Arts in Atlanta</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
 
@@ -12,7 +12,7 @@
   Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril Fatface"/>
-
+  <meta name="description" content="Find Martial Arts and Karate classes for kids in Marietta and Atlanta. Martial Arts Classes for all ages, students, kids, teens, and adults."/>
 </head>
  
 
@@ -30,7 +30,7 @@
   
   <!--First Heading-->
   <div class="firstHeading">
-    <img src="assets/coverImage.png" height="200px" width="auto">
+    <img src="assets/coverImage.png" height="200px" max-width="100%">
     <p>
       MA Masters is dedicated to teaching young students about mastering the craft of Martial Arts. We are currently based in Atlanta, Georgia. 
       Our classes are led by ex-professional MMA fighter, Michael Anderson. He is dedicated to fostering the strength of young students
@@ -40,27 +40,13 @@
 
   <!--Contact Form-->
   <div class="contactContainer">
-      <form class="contactForm" action="contact_us_submitted.html" method="POST">
+      <form onsubmit="sendEmail(); reset(); return false">
 
-        <input type="hidden" name="access_key" value="8cfbea0d-cc13-4a22-a152-d5121194904f">
+        <!-- Required: If submitting form without Javascript.
+            Default web3forms output is in JSON format. -->
+        <!-- Not Required: If javascript, use "window.location.hash" instead -->
+        <!-- <input type="hidden" name="redirect" value="https://web3forms.com/success"> -->
   
-    <!-- Optional: Subject an be prefilled using type="hidden"
-         or type="text" for normal user submitted input -->
-    <input type="hidden" name="subject" value="New Submission from Contact Us MA Martial Arts Form">
-  
-    <!-- Optional: From Name you want to see in the email
-         Default is "Notifications". you can overwrite here -->
-    <input type="hidden" name="from_name" value="Contact Us MA Martial Arts Form">
-  
-    <!-- Required: If submitting form without Javascript.
-         Default web3forms output is in JSON format. -->
-    <!-- Not Required: If javascript, use "window.location.hash" instead -->
-    <input type="hidden" name="redirect" value="https://web3forms.com/success">
-  
-    <!-- Optional: But Recommended: To Prevent SPAM Submission.
-         Make sure its hidden by default -->
-    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
         <h1>Contact Us</h1>
         <h3>Learn more about our classes here!</h3>
         <input type="text" name="Full Name" id="contact_name" placeholder="Full Name" required/>
@@ -87,7 +73,20 @@
 
   </div>
 
-  <script src="script.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function sendEmail(){
+      Email.send({
+          SecureToken : "0e7d278d-1e14-434a-934b-6ff5e9a4be98",
+          To : 'mamasters09@gmail.com',
+          From : document.getElementById("contact_email").value,
+          Subject : "New MA Martial Arts Contact Us Submission",
+          Body : document.getElementById("contact_message").value
+      }).then(
+        message => alert(message)
+      );
+    }
+  </script>
 </body>
 
 </html>
